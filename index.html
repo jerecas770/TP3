@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>toyotagr</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    setTimeout(() => {
+      preloader.style.opacity = "0";
+      preloader.style.visibility = "hidden";
+      preloader.style.pointerEvents = "none";
+    }, 2000); // ⏱️ 2000 milisegundos = 2 segundos de delay
+  });
+</script>
+
+
+<body>
+
+<div id="preloader">
+  <img src="logo.png" alt="Logo GR86">
+</div>
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop id="videoFondo">
+    <source src="video fondo.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
+
+  <!-- Encabezado -->
+  <header>
+    <img src="logo.png" alt="Logo ToyotaGR">
+    <nav>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#modelos">Modelos</a>
+      <a href="#info">Info</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <div class="contenido" id="nosotros">
+    <h1>Bienvenido al nuevo Toyota GR86</h1>
+    <p>Desliza hacia abajo para descubrir más...</p>
+  </div>
+<!--images 3 -->
+
+
+<section class="razones-gr86">
+  <h2>Razones para tener un GR86:</h2>
+  <div class="contenedor-razones">
+    <!-- RAZÓN 1 -->
+    <div class="razon">
+      <img src="foto 1.jpg" alt="Compacto y ligero">
+      <h3>COMPACTO Y LIGERO</h3>
+      <p>La respuesta del acelerador, los cambios de marcha y el tacto de embrague, conjugados con una estructura más ligera, te permitirán volver a disfrutar el manejo.</p>
+    </div>
+
+    <!-- RAZÓN 2 -->
+    <div class="razon">
+      <img src="foto2.jpg" alt="Equilibrio perfecto">
+      <h3>EQUILIBRIO PERFECTO</h3>
+      <p>GR86 ofrece una experiencia única de conducción, con una influencia directa del recorrido de Gazoo Racing en competición. Es pura armonía entre motor y chasis.</p>
+    </div>
+
+    <!-- RAZÓN 3 -->
+    <div class="razon">
+      <img src="foto 3.jpg" alt="Diversión de manejo">
+      <h3>DIVERSIÓN DE MANEJO</h3>
+      <p>GR86 define a la perfección el objetivo del mismo: la diversión del conductor, aprovechando todos los recursos mecánicos y electrónicos para vivir cada curva.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Sección de modelos Toyota GR86 -->
+<section class="modelo-gr86">
+  <div class="contenedor-modelo">
+    <!-- IZQUIERDA -->
+    <div class="info-auto">
+      <h2>Encontrá tu versión</h2>
+      <p class="modelo-nombre">GR86</p>
+      <p class="modelo-sub">GR86 MT</p>
+      <div class="linea-roja"></div>
+      <img id="imagen-auto" src="gr86-blanco.png" alt="Toyota GR86" class="auto-gr86">
+      <div class="colores">
+        <p>Elegí el color</p>
+        <div class="opciones-colores">
+          <span class="color blanco" onclick="cambiarAuto('gr86-blanco.png')"></span>
+          <span class="color rojo" onclick="cambiarAuto('gr86-rojo.png')"></span>
+          <span class="color marron" onclick="cambiarAuto('gr86-marron.png')"></span>
+          <span class="color gris" onclick="cambiarAuto('gr86-gris.png')"></span>
+        </div>
+        <p id="nombre-color" class="nombre-color">Crystal White Pearl</p>
+      </div>
+    </div>
+
+    <!-- DERECHA -->
+    <div class="acciones-auto">
+      <p>Consultar disponibilidad</p>
+      <button class="boton-rojo">Configurá y Cotizá</button>
+      <a href="#">Quiero que me contacten</a><br>
+      <a href="#">Ver ficha técnica</a>
+    </div>
+  </div>
+</section>
+<!--ficha tecnica-->
+
+<section class="experiencias-y-ficha">
+  <div class="videos-clientes">
+    <h2><span style="color: rgb(255, 255, 255);">EXPERIENCIA</span> <span style="color: rgb(187, 0, 0);">DE CLIENTES</span></h2>
+
+    <div class="video">
+      <iframe width="100%" height="250" src="https://www.youtube.com/embed/17kwOaUp2uM" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="video">
+      <iframe width="100%" height="250" src="https://www.youtube.com/embed/xdEKlXPC8vk" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="ficha-tecnica">
+    <h2>Ficha Técnica</h2>
+    <table>
+      <tr><th>Categoría</th><th>Especificación</th></tr>
+      <tr><td>Motor</td><td>Bóxer 4 cilindros, 2.4 litros</td></tr>
+      <tr><td>Potencia</td><td>237 caballos de fuerza</td></tr>
+      <tr><td>Torque</td><td>250 Nm</td></tr>
+      <tr><td>Transmisión</td><td>Manual o automática de 6 velocidades</td></tr>
+      <tr><td>Largo</td><td>4.265 mm</td></tr>
+      <tr><td>Ancho</td><td>1.775 mm</td></tr>
+      <tr><td>Alto</td><td>1.310 mm</td></tr>
+      <tr><td>Distancia entre ejes</td><td>2.575 mm</td></tr>
+      <tr><td>Peso</td><td>1.270 kg</td></tr>
+    </table>
+  </div>
+</section>
+
+<!--imagen con lista ordenada-->
+<section class="car-info-overlay">
+  <div class="car-text-overlay">
+    <ol>
+      <li><strong>Potente</strong> – Tiene un motor con mucha fuerza y aceleración rápida.</li>
+      <li><strong>Ágil</strong> – Se maneja con precisión y responde bien al volante.</li>
+      <li><strong>Estable</strong> – Se comporta con seguridad a altas velocidades o en curvas.</li>
+      <li><strong>Eficiente</strong> – Aprovecha bien el combustible o la energía sin desperdicio, incluso en alto rendimiento.</li>
+    </ol>
+  </div>
+</section>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="logo.png" alt="Toyota GR Logo" />
+      <p>TOYOTAGR</p>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Nosotros</h4>
+        <ul>
+          <li><a href="#">Quiénes somos</a></li>
+          <li><a href="#">Historia</a></li>
+          <li><a href="#">Visión</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Modelos</h4>
+        <ul>
+          <li><a href="#">GR86</a></li>
+          <li><a href="#">Supra</a></li>
+          <li><a href="#">Corolla GR</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="#">11 3487 9396</a></li>
+          <li><a href="#">jere.cas70@gmail.com</a></li>
+          <li><a href="https://github.com/jerecas770" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/ToyotaArgentina/?locale=es_LA"><img src="face1.png" alt="Facebook" /></a>
+      <a href="https://x.com/toyotamotorcorp"><img src="twiter1.png" alt="Twitter" /></a>
+      <a href="https://github.com/jerecas770"><img src="GITGUB.png" alt="github" /></a>
+      <a href="https://www.youtube.com/@toyotaesp"><img src="youtube-play.png" alt="YouTube" /></a>
+    </div>
+    <p>©Copyright. Todos los derechos reservados a jerecas770.</p>
+  </div>
+</footer>
+
+
+<script>
+  function cambiarAuto(imagen) {
+    const img = document.getElementById("imagen-auto");
+    const colorTexto = document.getElementById("nombre-color");
+
+    img.style.opacity = 0;
+    setTimeout(() => {
+      img.src = imagen;
+      img.style.opacity = 1;
+
+      // Cambia el texto del color según el nombre del archivo
+      const nombreColor = {
+        "gr86-blanco.png": "Crystal White Pearl",
+        "gr86-rojo.png": "Red Flame",
+        "gr86-marron.png": "Bronze Shadow",
+        "gr86-gris.png": "Dark Metallic Gray"
+      };
+      colorTexto.textContent = nombreColor[imagen] || "";
+    }, 200);
+  }
+</script>
+
+
+
+</body>
+</html>

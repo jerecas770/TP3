@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Video de fondo */
+#videoFondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+header img {
+  height: 50px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Contenido */
+.contenido {
+  padding: 150px 50px;
+  min-height: 100vh;
+}
+
+/* Modelos GR86 */
+
+
+
+.modelo-gr86 {
+  background: rgba(0, 0, 0, 0.8); /* fondo negro difuminado */
+  color: white;
+  padding: 50px 20px;
+}
+
+.contenedor-modelo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.info-auto {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.info-auto h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.modelo-nombre {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.modelo-sub {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.linea-roja {
+  width: 60px;
+  height: 3px;
+  background-color: red;
+  margin: 0 auto 20px;
+}
+
+.auto-gr86 {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.colores {
+  margin-top: 20px;
+}
+
+.opciones-colores {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.color {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.color.blanco { background-color: white; }
+.color.rojo { background-color: #8B0000; }
+.color.marron { background-color: #000000; }
+.color.gris { background-color: #444; }
+
+.nombre-color {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.acciones-auto {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  text-align: left;
+}
+
+.boton-rojo {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  font-size: 16px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.acciones-auto a {
+  display: block;
+  color: white;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 50px 20px 30px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #444;
+  padding-bottom: 30px;
+}
+
+.footer-logo {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+  flex: 3;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-width: 300px;
+}
+
+.footer-links h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: red;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-bottom p {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #888;
+}
+
+.social-icons a {
+  margin: 0 8px;
+}
+
+.social-icons img {
+  width: 24px;
+  filter: brightness(0.8);
+  transition: 0.3s;
+}
+
+.social-icons img:hover {
+  filter: brightness(1.2);
+}
+
+
+/*intro*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#preloader img {
+  width: 180px;
+  animation: zoomInOut 2s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+
+
+/*imagenes 3*/
+
+
+}
+.razones-gr86 {
+  background-color: #fff;
+  padding: 60px 20px;
+  color: #000;
+  text-align: center;
+}
+
+.razones-gr86 h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.contenedor-razones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.razon {
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: left;
+}
+
+.razon img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.razon h3 {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.razon p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+/*ficha tecnica*/
+
+.ficha-tecnica {
+  background-color: #fff;
+  color: #000;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.ficha-tecnica h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.ficha-tecnica table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 600px;
+  font-size: 16px;
+}
+
+.ficha-tecnica th,
+.ficha-tecnica td {
+  border: 1px solid #ccc;
+  padding: 12px 10px;
+  text-align: left;
+}
+
+.ficha-tecnica th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+/*otra fica7*/
+
+
+.experiencias-y-ficha {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.4); /* negro semi-transparente */
+  backdrop-filter: blur(10px); /* efecto difuminado */
+  border-radius: 20px;
+}
+
+.videos-clientes {
+  max-width: 500px;
+  flex: 1;
+}
+
+.videos-clientes h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.video {
+  margin-bottom: 20px;
+}
+
+
+.ficha-tecnica {
+  background: none; /* sin fondo */
+  color: white;     /* letras blancas */
+  text-transform: uppercase; /* todo en mayúscula */
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  font-family: 'Arial', sans-serif;
+}
+
+
+
+.ficha-tecnica h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ficha-tecnica table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.ficha-tecnica th,
+.ficha-tecnica td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.ficha-tecnica th {
+  background-color: #f0f0f0;
+}
+
+
+.car-info-overlay {
+  background-image: url('imagen\ lista.jpg'); /* Cambia por el nombre de tu imagen */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+  position: relative;
+}
+
+.car-text-overlay {
+  max-width: 500px;
+  margin-left: 5%;
+  font-style: italic; /* ✨ Hace todo el texto cursiva */
+}
+
+.car-text-overlay ol {
+  list-style-position: inside;
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+.car-text-overlay li {
+  margin-bottom: 10px;
+}
