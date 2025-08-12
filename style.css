@@ -461,3 +461,51 @@ nav a:hover {
 .car-text-overlay li {
   margin-bottom: 10px;
 }
+/*integrante1*/
+   header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #e60000;
+      font-size: 3rem;
+    }
+
+    .timeline {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .event {
+      border-left: 3px solid #e60000;
+      padding-left: 20px;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .event::before {
+      content: '';
+      width: 15px;
+      height: 15px;
+      background-color: #e60000;
+      border-radius: 50%;
+      position: absolute;
+      left: -9px;
+      top: 5px;
+    }
+
+    .event h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .event p {
+      line-height: 1.6;
+    }
+
+    .event img {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 1rem;
+      border: 2px solid #e60000;
+      border-radius: 10px;
+    }
